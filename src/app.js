@@ -1,5 +1,5 @@
 
-const router = require('./routes/home');
+const router = require('./routes');
 const express = require('express');
 const useragent = require('express-useragent');
 const RequestLog = require('./models/requestLog');
@@ -17,6 +17,7 @@ const startServer = async () => {
                     browser: useragent.parse(req.headers['user-agent']).browser,
                     url: req.path,
                     requestTime: Date.now(),
+                    user: req.user && req.user.id || null,
                 });
             });
             next();
