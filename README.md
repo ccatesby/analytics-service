@@ -1,4 +1,4 @@
-Platform that enables visitors to find and book recommended hotels near conference venue's.
+Node api service that collects view data and serves aggregated view data via authenicated endpoint. 
 
 To run:
 
